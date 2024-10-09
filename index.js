@@ -8,3 +8,6 @@ const authRoutes = require("./route/auth");
 
 // Initialize server
 const app = express();
+
+// Set-up middleware
+app.use(express.json());
