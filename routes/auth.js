@@ -14,3 +14,6 @@ router.post("./register", registerUser);
 
 // user login
 router.post("./login", loginUser);
+
+// user logout
+router.get("./logout", logoutUser);
