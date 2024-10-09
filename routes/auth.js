@@ -17,3 +17,5 @@ router.post("./login", loginUser);
 
 // user logout
 router.get("./logout", logoutUser);
+
+module.exports = router;
