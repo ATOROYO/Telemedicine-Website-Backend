@@ -11,3 +11,6 @@ const router = express.Router();
 
 // user registration
 router.post("./register", registerUser);
+
+// user login
+router.post("./login", loginUser);
