@@ -17,5 +17,8 @@ app.use(
   session({
     key: "user_id",
     secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: new MySQLStore({}, db),
   })
 );
