@@ -11,3 +11,11 @@ const app = express();
 
 // Set-up middleware
 app.use(express.json());
+
+// Set-up session
+app.use(
+  session({
+    key: "user_id",
+    secret: process.env.SESSION_SECRET,
+  })
+);
