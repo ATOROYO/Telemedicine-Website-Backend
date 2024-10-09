@@ -25,3 +25,10 @@ app.use(
 
 // Routes
 app.use("/auth", authRoutes);
+
+// Start the server
+const port = process.env.port;
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
