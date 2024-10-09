@@ -22,3 +22,6 @@ app.use(
     store: new MySQLStore({}, db),
   })
 );
+
+// Routes
+app.use("/auth", authRoutes);
