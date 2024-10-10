@@ -29,3 +29,6 @@ exports.registerUser = async (req, res) => {
     res.status(500).json({ message: "An error occured", err });
   }
 };
+
+exports.loginUser;
+exports.logoutUser;

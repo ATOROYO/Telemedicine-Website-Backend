@@ -7,7 +7,7 @@ const {
 } = require("./controllers/authController");
 const router = express.Router();
 
-//configure route
+//configure routes
 
 // user registration
 router.post("./register", registerUser);
