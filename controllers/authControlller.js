@@ -14,5 +14,9 @@ exports.registerUser = async (req, res) => {
 
 //   Hash the password
 const hashedPassword = await bcrypt.hash(password,10)
+
+// Insert the record to db
+await db.execute("INSERT INTO users (name, email, password) VALUES (?,?,?)", [name, email ,hashedPassword])
+res.status(201).json({message:"Usser registered successfully."})
     }
 }
