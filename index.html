@@ -32,6 +32,18 @@
           const name = document.getElementById("name").value;
           const email = document.getElementById("email").value;
           const password = document.getElementById("password").value;
+
+          //   send data to the server
+          const response = await fetch("/auth/register", {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+            },
+            body: JSON.stringify({ name, email, password }),
+          });
+          const data = await response.json();
+
+          alert("New User Created");
         });
     </script>
   </body>
