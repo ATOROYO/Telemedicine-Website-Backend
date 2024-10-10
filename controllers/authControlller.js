@@ -26,6 +26,6 @@ exports.registerUser = async (req, res) => {
 
     // Server error
   } catch (err) {
-    res.status(500).json({ message: "An error occured" });
+    res.status(500).json({ message: "An error occured", err });
   }
 };
