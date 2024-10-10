@@ -11,5 +11,8 @@ exports.registerUser = async (req, res) => {
   if(row.lenth > 0){
       return res.status(400).json({message:"User already exist"})
   }
+
+//   Hash the password
+const hashedPassword = await bcrypt.hash(password,10)
     }
 }
